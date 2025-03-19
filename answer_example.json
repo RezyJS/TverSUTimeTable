@@ -1,0 +1,331 @@
+[
+  {
+      "groupName": "ПМиК-36",
+      "timetableId": 6264,
+      "lessonTimeData": [
+          {
+              "end": "10:05",
+              "start": "08:30"
+          },
+          {
+              "end": "11:50",
+              "start": "10:15"
+          },
+          {
+              "end": "13:45",
+              "start": "12:10"
+          },
+          {
+              "end": "15:35",
+              "start": "14:00"
+          },
+          {
+              "end": "17:30",
+              "start": "15:55"
+          },
+          {
+              "end": "19:20",
+              "start": "17:45"
+          },
+          {
+              "end": "21:00",
+              "start": "19:30"
+          }
+      ],
+      "types": "classes",
+      "start": "03.02.2025",
+      "finish": "25.05.2025",
+      "withDates": false,
+      "lessonsContainers": [
+          {
+              "timetableId": 6264,
+              "lessonNumber": 1,
+              "date": "19.05.2025",
+              "weekDay": 1,
+              "weekMark": "plus",
+              "positionX": 1,
+              "sizeX": 1,
+              "positionY": 2,
+              "sizeY": 1,
+              "texts": [
+                  null,
+                  "Операционные системы (Практика)",
+                  "Кузьминых И.М. (МТС Диджитал - Руководитель направления)",
+                  "Учебный корпус №3 - 4б"
+              ]
+          },
+          {
+              "timetableId": 6264,
+              "lessonNumber": 0,
+              "date": "16.05.2025",
+              "weekDay": 5,
+              "weekMark": "minus",
+              "positionX": 1,
+              "sizeX": 1,
+              "positionY": 1,
+              "sizeY": 1,
+              "texts": [
+                  null,
+                  "Алгоритмы и анализ сложности (Практика)",
+                  "Карлов Б.Н. (Доцент)",
+                  "Учебный корпус №3 - 308"
+              ]
+          },
+          {
+              "timetableId": 6264,
+              "lessonNumber": 4,
+              "date": "24.05.2025",
+              "weekDay": 6,
+              "weekMark": "every",
+              "positionX": 1,
+              "sizeX": 1,
+              "positionY": 1,
+              "sizeY": 2,
+              "texts": [
+                  null,
+                  "Обработка изображений (Практика)",
+                  "Семёнов А.Б. (ДоцентАО «Международный аэропорт Шереметьево», главный специалист)",
+                  "Учебный корпус №3 - 212"
+              ]
+          },
+          {
+              "timetableId": 6264,
+              "lessonNumber": 3,
+              "date": "24.05.2025",
+              "weekDay": 6,
+              "weekMark": "every",
+              "positionX": 1,
+              "sizeX": 1,
+              "positionY": 1,
+              "sizeY": 2,
+              "texts": [
+                  null,
+                  "Обработка изображений (Лекция)",
+                  "Семёнов А.Б. (Доцент, АО «Международный аэропорт Шереметьево», главный специалист)",
+                  "Учебный корпус №3 - 212"
+              ]
+          },
+          {
+              "timetableId": 6264,
+              "lessonNumber": 2,
+              "date": "24.05.2025",
+              "weekDay": 6,
+              "weekMark": "every",
+              "positionX": 1,
+              "sizeX": 1,
+              "positionY": 1,
+              "sizeY": 2,
+              "texts": [
+                  null,
+                  "Теория неопределенности и нечеткая логика (Практика)",
+                  "Новикова В.Н. (доцент)",
+                  "Учебный корпус №3 - 212"
+              ]
+          },
+          {
+              "timetableId": 6264,
+              "lessonNumber": 1,
+              "date": "24.05.2025",
+              "weekDay": 6,
+              "weekMark": "every",
+              "positionX": 1,
+              "sizeX": 1,
+              "positionY": 1,
+              "sizeY": 2,
+              "texts": [
+                  null,
+                  "Теория неопределенности и нечеткая логика (Лекция)",
+                  "Новикова В.Н. (доцент)",
+                  "Учебный корпус №3 - 212"
+              ]
+          },
+          {
+              "timetableId": 6264,
+              "lessonNumber": 3,
+              "date": "16.05.2025",
+              "weekDay": 5,
+              "weekMark": "minus",
+              "positionX": 1,
+              "sizeX": 1,
+              "positionY": 1,
+              "sizeY": 1,
+              "texts": [
+                  null,
+                  "Численные методы (Практика)",
+                  "Зингерман К.М. (Заведующий кафедрой)",
+                  "Учебный корпус №3 - 308"
+              ]
+          },
+          {
+              "timetableId": 6264,
+              "lessonNumber": 2,
+              "date": "23.05.2025",
+              "weekDay": 5,
+              "weekMark": "every",
+              "positionX": 1,
+              "sizeX": 1,
+              "positionY": 1,
+              "sizeY": 2,
+              "texts": [
+                  null,
+                  "Численные методы (Лекция)",
+                  "Зингерман К.М. (Заведующий кафедрой)",
+                  "Учебный корпус №3 - 308"
+              ]
+          },
+          {
+              "timetableId": 6264,
+              "lessonNumber": 1,
+              "date": "23.05.2025",
+              "weekDay": 5,
+              "weekMark": "every",
+              "positionX": 1,
+              "sizeX": 1,
+              "positionY": 1,
+              "sizeY": 2,
+              "texts": [
+                  null,
+                  "Операционные системы (Лекция)",
+                  "Кудряшов М.Ю. (Доцент)",
+                  "Учебный корпус №3 - 212"
+              ]
+          },
+          {
+              "timetableId": 6264,
+              "lessonNumber": 1,
+              "date": "22.05.2025",
+              "weekDay": 4,
+              "weekMark": "every",
+              "positionX": 1,
+              "sizeX": 1,
+              "positionY": 1,
+              "sizeY": 2,
+              "texts": [
+                  null,
+                  "Автоматизированные информационно-управляющие системы специального назначения (Лаб. работа)",
+                  "Бреслер И.Б. (Заведующий кафедры, НИИИТ)",
+                  "Учебный корпус №3 - 200"
+              ]
+          },
+          {
+              "timetableId": 6264,
+              "lessonNumber": 0,
+              "date": "22.05.2025",
+              "weekDay": 4,
+              "weekMark": "every",
+              "positionX": 1,
+              "sizeX": 1,
+              "positionY": 1,
+              "sizeY": 2,
+              "texts": [
+                  null,
+                  "Автоматизированные информационно-управляющие системы специального назначения (Лаб. работа)",
+                  "Бреслер И.Б. (Заведующий кафедры, НИИИТ)",
+                  "Учебный корпус №3 - 200"
+              ]
+          },
+          {
+              "timetableId": 6264,
+              "lessonNumber": 2,
+              "date": "21.05.2025",
+              "weekDay": 3,
+              "weekMark": "every",
+              "positionX": 1,
+              "sizeX": 1,
+              "positionY": 1,
+              "sizeY": 2,
+              "texts": [
+                  null,
+                  "Методы оптимизации и исследование операций (Лекция)",
+                  "Соломаха Г.М. (Профессор)",
+                  "Учебный корпус №3 - 308"
+              ]
+          },
+          {
+              "timetableId": 6264,
+              "lessonNumber": 1,
+              "date": "21.05.2025",
+              "weekDay": 3,
+              "weekMark": "plus",
+              "positionX": 1,
+              "sizeX": 1,
+              "positionY": 2,
+              "sizeY": 1,
+              "texts": [
+                  null,
+                  "Методы оптимизации и исследование операций (Практика)",
+                  "Соломаха Г.М. (Профессор)",
+                  "Учебный корпус №3 - 310"
+              ]
+          },
+          {
+              "timetableId": 6264,
+              "lessonNumber": 1,
+              "date": "20.05.2025",
+              "weekDay": 2,
+              "weekMark": "every",
+              "positionX": 1,
+              "sizeX": 1,
+              "positionY": 1,
+              "sizeY": 2,
+              "texts": [
+                  null,
+                  "Алгоритмы и анализ сложности (Лекция)",
+                  "Карлов Б.Н. (Доцент)",
+                  "Учебный корпус №3 - 308"
+              ]
+          },
+          {
+              "timetableId": 6264,
+              "lessonNumber": 0,
+              "date": "20.05.2025",
+              "weekDay": 2,
+              "weekMark": "every",
+              "positionX": 1,
+              "sizeX": 1,
+              "positionY": 1,
+              "sizeY": 2,
+              "texts": [
+                  null,
+                  "Алгоритмы и анализ сложности (Лекция)",
+                  "Карлов Б.Н. (Доцент)",
+                  "Учебный корпус №3 - 308"
+              ]
+          },
+          {
+              "timetableId": 6264,
+              "lessonNumber": 3,
+              "date": "19.05.2025",
+              "weekDay": 1,
+              "weekMark": "plus",
+              "positionX": 1,
+              "sizeX": 1,
+              "positionY": 2,
+              "sizeY": 1,
+              "texts": [
+                  null,
+                  "Теория случайных процессов (Практика)",
+                  "Захарова И.В. (Доцент)",
+                  "Учебный корпус №3 - 310"
+              ]
+          },
+          {
+              "timetableId": 6264,
+              "lessonNumber": 2,
+              "date": "19.05.2025",
+              "weekDay": 1,
+              "weekMark": "every",
+              "positionX": 1,
+              "sizeX": 1,
+              "positionY": 1,
+              "sizeY": 2,
+              "texts": [
+                  null,
+                  "Теория случайных процессов (Лекция)",
+                  "Захарова И.В. (Доцент)",
+                  "Учебный корпус №3 - 212"
+              ]
+          }
+      ]
+  }
+]

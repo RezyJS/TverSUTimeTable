@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="src/styles/styles.css"
+    />
+    <title>TimeTable</title>
+  </head>
+  <body style="width: 100vw; height: 100vh; margin: 0px; padding: 0px">
+    <img
+      src="https://cataas.com/cat"
+      alt="cat"
+      style="
+        position: absolute;
+        width: 200px;
+        height: 100px;
+        left: 10px;
+        top: 10px;
+        object-fit: contain;
+      "
+    />
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      "
+    >
+      <div>
+        <p style="font-weight: 600; font-size: x-large">
+          Неделя &laquo;
+          <span id="weekStatus">-</span>
+          &raquo;
+        </p>
+      </div>
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex: 1;
+          width: 80%;
+          gap: 20px;
+        "
+      >
+        <div style="display: flex; flex-direction: column; gap: 20px">
+          Вчера
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: start;
+              gap: 10px;
+              font-size: small;
+              flex: 1;
+            "
+            id="timetableContainerYesterday"
+          >
+            <div
+              class="loader"
+              id="yesterday"
+            ></div>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 20px">
+          <p>Сегодня</p>
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: start;
+              gap: 10px;
+              font-size: small;
+              flex: 1;
+            "
+            id="timetableContainer"
+          >
+            <div
+              class="loader"
+              id="today"
+            ></div>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 20px">
+          Завтра
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: start;
+              gap: 10px;
+              font-size: small;
+              flex: 1;
+            "
+            id="timetableContainerTomorrow"
+          >
+            <div
+              class="loader"
+              id="tomorrow"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/scripts/main.js"></script>
+  </body>
+</html>
