@@ -115,7 +115,7 @@ const main = async () => {
   ]
 
   for (const { day, timetable, loader } of iterables) {
-    const lessons = new Array(null, null, null, null, null);
+    const lessons = new Array(5);
 
     data
       .lessonsContainers
@@ -129,9 +129,6 @@ const main = async () => {
       for (const idx in lessons) {
         if (lessons[idx] !== null) {
           timetable.appendChild(lessons[idx].node);
-        } else {
-          const emptyNode = new LessonNode(+idx + 1, '-', '-', '-');
-          timetable.appendChild(emptyNode.node);
         }
       }
     
