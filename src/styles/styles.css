@@ -1,3 +1,97 @@
+.flex {
+  display: flex;
+}
+
+.horizontal {
+  flex-direction: row;
+}
+
+.vertical {
+  flex-direction: column;
+}
+
+.start {
+  justify-content: center;
+  align-items: start;
+}
+
+.top {
+  justify-content: start;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.full {
+  flex: 1;
+  width: 100%;
+}
+
+.g-10 {
+  gap: 10px;
+}
+
+.g-20 {
+  gap: 20px;
+}
+
+.w-400 {
+  width: 400px;
+  min-width: 400px;
+  max-width: 400px;
+}
+
+.h-80 {
+  height: 80px;
+  min-height: 80px;
+  max-height: 80px;
+}
+
+.timetable {
+  display: grid;
+}
+
+:where(.timetable, #name, #professor, #room) {
+  font-weight: 300;
+}
+
+.timetable > div {
+  padding: 10px 20px;
+  width: max-content;
+}
+
+.timetable > div #place {
+  font-weight: 800;
+  font-size: x-large;
+}
+
+.timetable > div #lecture {
+  font-weight: 600;
+  font-size: larger;
+}
+
+.timetable > div:first-child {
+  border-radius: 10px 10px 0px 0px;
+}
+
+.timetable > div:last-child {
+  border-radius: 0px 0px 10px 10px;
+}
+
+.timetable > div:first-child:last-child {
+  border-radius: 10px;
+}
+
+.timetable > div:nth-child(even) {
+  background-color: #a3d5ff;
+}
+
+.timetable > div:nth-child(odd) {
+  background-color: #83c9f4;
+}
+
 .loader {
   border: 6px solid #f3f3f3; /* Light grey */
   border-top: 6px solid #3498db; /* Blue */

@@ -12,8 +12,17 @@
     />
     <title>TimeTable</title>
   </head>
-  <body style="width: 100vw; height: 100vh; margin: 0px; padding: 0px">
+  <body
+    style="
+      width: 100vw;
+      height: 100vh;
+      margin: 0px;
+      padding: 0px;
+      background-color: #d9f0ff;
+    "
+  >
     <img
+      id="image-hero"
       src="https://cataas.com/cat"
       alt="cat"
       style="
@@ -42,74 +51,59 @@
         </p>
       </div>
       <div
-        style="
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex: 1;
-          width: 80%;
-          gap: 20px;
-        "
+        style="flex: 1; width: 80%; height: 100%"
+        class="flex horizontal top center g-20"
       >
-        <div style="display: flex; flex-direction: column; gap: 20px">
-          Вчера
+        <div class="flex vertical center g-20">
           <div
-            style="
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: start;
-              gap: 10px;
-              font-size: small;
-              flex: 1;
-            "
-            id="timetableContainerYesterday"
+            class="timetable"
+            id="yesterday"
           >
             <div
-              class="loader"
-              id="yesterday"
-            ></div>
+              class="flex horizontal center w-400"
+              style="font-weight: bold; font-size: x-large"
+            >
+              Вчера
+            </div>
           </div>
+          <div
+            class="loader"
+            id="yesterday"
+          ></div>
         </div>
-        <div style="display: flex; flex-direction: column; gap: 20px">
-          <p>Сегодня</p>
+        <div class="flex vertical center g-20">
           <div
-            style="
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: start;
-              gap: 10px;
-              font-size: small;
-              flex: 1;
-            "
-            id="timetableContainer"
+            class="timetable"
+            id="today"
           >
             <div
-              class="loader"
-              id="today"
-            ></div>
+              class="flex horizontal center w-400"
+              style="font-weight: bold; font-size: x-large"
+            >
+              Сегодня
+            </div>
           </div>
+          <div
+            class="loader"
+            id="today"
+          ></div>
         </div>
-        <div style="display: flex; flex-direction: column; gap: 20px">
-          Завтра
+        <div class="flex vertical center g-20">
           <div
-            style="
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: start;
-              gap: 10px;
-              font-size: small;
-              flex: 1;
-            "
-            id="timetableContainerTomorrow"
+            class="timetable"
+            id="tomorrow"
           >
             <div
-              class="loader"
-              id="tomorrow"
-            ></div>
+              class="flex horizontal center w-400"
+              style="font-weight: bold; font-size: x-large"
+            >
+              Завтра
+            </div>
           </div>
+          <div
+            class="loader"
+            id="tomorrow"
+          ></div>
         </div>
       </div>
     </div>

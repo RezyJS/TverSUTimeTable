@@ -15,12 +15,64 @@ const getRUDate = (date) => {
   return `${date.slice(6)}-${date.slice(3, 5)}-${date.slice(0, 2)}` 
 }
 
-const main = async () => {
+class LessonNode {
+  #node;
+  #order;
+  #name;
+  #professor;
+  #room;
 
+  constructor(order, name, professor, room) {
+    this.#node = document.createElement('div');
+    this.#node.classList.add('flex', 'horizontal', 'g-20', 'w-400', 'h-80');
+
+    this.#order = order;
+    this.#name = name;
+    this.#professor = professor;
+    this.#room = room;
+
+    this.#createNode();
+  }
+
+  #createNode() {
+    const order = document.createElement('div');
+    order.classList.add('flex', 'vertical', 'start');
+    order.id = 'place';
+    order.textContent = this.#order;
+
+    const aboutContainer = document.createElement('div');
+    aboutContainer.classList.add('flex', 'vertical', 'start', 'g-10', 'full');
+
+    const name = document.createElement('div');
+    name.textContent = this.#name;
+    name.id = 'name';
+
+    const professor = document.createElement('div');
+    professor.textContent = this.#professor;
+    professor.id = 'professor';
+
+    const room = document.createElement('div');
+    room.textContent = this.#room;
+    room.id = 'room';
+
+    aboutContainer.appendChild(name);
+    aboutContainer.appendChild(professor);
+    aboutContainer.appendChild(room);
+
+    this.#node.appendChild(order);
+    this.#node.appendChild(aboutContainer);
+  }
+
+  get node() {
+    return this.#node;
+  }
+}
+
+const main = async () => {
   const weekStatus = document.querySelector('span#weekStatus');
-  const timetableContainer = document.querySelector('div#timetableContainer');
-  const timetableContainerYesterday = document.querySelector('div#timetableContainerYesterday');
-  const timetableContainerTomorrow = document.querySelector('div#timetableContainerTomorrow');
+  const timetableContainer = document.querySelector('div.timetable#today');
+  const timetableContainerYesterday = document.querySelector('div.timetable#yesterday');
+  const timetableContainerTomorrow = document.querySelector('div.timetable#tomorrow');
   const loader = document.querySelector('.loader#today');
   const loaderYesterday = document.querySelector('.loader#yesterday');
   const loaderTomorrow = document.querySelector('.loader#tomorrow');
@@ -34,7 +86,7 @@ const main = async () => {
   yesterday.setDate(yesterday.getDate() - 1);
 
   const tomorrow = new Date();
-  tomorrow.setDate(tomorrow.getDate() + 1);
+  tomorrow.setDate(tomorrow.getDate() + 3);
 
   if (today - finishDate >= 0) {
     alert('Занятия закончились!');
@@ -57,39 +109,29 @@ const main = async () => {
   }
 
   const iterables = [
-    { day: yesterday.getDay(), timetable: timetableContainerYesterday, loader: loader },
-    { day: today.getDay(), timetable: timetableContainer, loader: loaderYesterday },
+    { day: yesterday.getDay(), timetable: timetableContainerYesterday, loader: loaderYesterday },
+    { day: today.getDay(), timetable: timetableContainer, loader: loader },
     { day: tomorrow.getDay(), timetable: timetableContainerTomorrow, loader: loaderTomorrow },
   ]
 
   for (const { day, timetable, loader } of iterables) {
-    const lessons = [];
+    const lessons = new Array(null, null, null, null, null);
+
     data
       .lessonsContainers
       .filter(({ weekMark, weekDay }) => (weekMark === week || weekMark === 'every') && weekDay === day)
       .forEach(item => {
-        const newNode = document.createElement('div');
-
-        const lesson = document.createElement('div');
-        lesson.textContent = item.texts[1];
-
-        const teacher = document.createElement('div');
-        teacher.textContent = item.texts[2];
-
-        const room = document.createElement('div');
-        room.textContent = item.texts[3];
-
-        newNode.appendChild(lesson);
-        newNode.appendChild(teacher);
-        newNode.appendChild(room);
+        const [, name, professor, room] = item.texts;
+        const newNode = new LessonNode(item.lessonNumber + 1, name, professor, room);
         lessons[item.lessonNumber] = newNode;
       })
 
-      console.info(lessons);
-
-      for (const node of lessons) {
-        if (node) {
-          timetable.appendChild(node);
+      for (const idx in lessons) {
+        if (lessons[idx] !== null) {
+          timetable.appendChild(lessons[idx].node);
+        } else {
+          const emptyNode = new LessonNode(+idx + 1, '-', '-', '-');
+          timetable.appendChild(emptyNode.node);
         }
       }
     
