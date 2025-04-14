@@ -36,9 +36,9 @@ const main = async () => {
   const tomorrow = new Date();
   tomorrow.setDate(tomorrow.getDate() + 1);
 
-
   if (today - finishDate >= 0) {
-    console.info('Занятия закончились');
+    alert('Занятия закончились!');
+    console.info('Занятия закончились!')
     return;
   }
 
@@ -56,59 +56,44 @@ const main = async () => {
     weekStatus.style.color = 'red'
   }
 
-  console.info('data filter 1');
-  console.info(data);
-  data.lessonsContainers.filter(({ weekMark, weekDay }) => (weekMark === week || weekMark === 'every') && weekDay === today.getDay()).forEach(item => {
-    const newNode = document.createElement('div');
+  const iterables = [
+    { day: yesterday.getDay(), timetable: timetableContainerYesterday },
+    { day: today.getDay(), timetable: timetableContainer },
+    { day: tomorrow.getDay(), timetable: timetableContainerTomorrow },
+  ]
 
-    const lesson = document.createElement('div');
-    lesson.textContent = item.texts[1];
-    const teacher = document.createElement('div');
-    teacher.textContent = item.texts[2];
-    const room = document.createElement('div');
-    room.textContent = item.texts[3];
+  for (const {day, timetable} of iterables) {
+    const lessons = [];
+    data
+      .lessonsContainers
+      .filter(({ weekMark, weekDay }) => (weekMark === week || weekMark === 'every') && weekDay === day)
+      .forEach(item => {
+        const newNode = document.createElement('div');
 
-    newNode.appendChild(lesson);
-    newNode.appendChild(teacher);
-    newNode.appendChild(room);
+        const lesson = document.createElement('div');
+        lesson.textContent = item.texts[1];
 
-    timetableContainer.appendChild(newNode)
-  });
+        const teacher = document.createElement('div');
+        teacher.textContent = item.texts[2];
 
-  console.info(yesterday.getDay());
-  data.lessonsContainers.filter(({ weekMark, weekDay }) => (weekMark === week || weekMark === 'every') && weekDay === yesterday.getDay()).forEach(item => {
-    const newNode = document.createElement('div');
+        const room = document.createElement('div');
+        room.textContent = item.texts[3];
 
-    const lesson = document.createElement('div');
-    lesson.textContent = item.texts[1];
-    const teacher = document.createElement('div');
-    teacher.textContent = item.texts[2];
-    const room = document.createElement('div');
-    room.textContent = item.texts[3];
+        newNode.appendChild(lesson);
+        newNode.appendChild(teacher);
+        newNode.appendChild(room);
+        lessons[item.lessonNumber] = newNode;
+      })
 
-    newNode.appendChild(lesson);
-    newNode.appendChild(teacher);
-    newNode.appendChild(room);
+      console.info(lessons);
 
-    timetableContainerYesterday.appendChild(newNode)
-  });
-
-  data.lessonsContainers.filter(({ weekMark, weekDay }) => (weekMark === week || weekMark === 'every') && weekDay === tomorrow.getDay()).forEach(item => {
-    const newNode = document.createElement('div');
-
-    const lesson = document.createElement('div');
-    lesson.textContent = item.texts[1];
-    const teacher = document.createElement('div');
-    teacher.textContent = item.texts[2];
-    const room = document.createElement('div');
-    room.textContent = item.texts[3];
-
-    newNode.appendChild(lesson);
-    newNode.appendChild(teacher);
-    newNode.appendChild(room);
-
-    timetableContainerTomorrow.appendChild(newNode)
-  });
+      for (const node of lessons) {
+        if (node) {
+          timetable.appendChild(node);
+        }
+      }
+    
+  }
 
   loader.style.display = 'none';
   loaderYesterday.style.display = 'none';
