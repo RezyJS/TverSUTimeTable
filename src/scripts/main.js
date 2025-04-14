@@ -57,12 +57,12 @@ const main = async () => {
   }
 
   const iterables = [
-    { day: yesterday.getDay(), timetable: timetableContainerYesterday },
-    { day: today.getDay(), timetable: timetableContainer },
-    { day: tomorrow.getDay(), timetable: timetableContainerTomorrow },
+    { day: yesterday.getDay(), timetable: timetableContainerYesterday, loader: loader },
+    { day: today.getDay(), timetable: timetableContainer, loader: loaderYesterday },
+    { day: tomorrow.getDay(), timetable: timetableContainerTomorrow, loader: loaderTomorrow },
   ]
 
-  for (const {day, timetable} of iterables) {
+  for (const { day, timetable, loader } of iterables) {
     const lessons = [];
     data
       .lessonsContainers
@@ -93,9 +93,6 @@ const main = async () => {
         }
       }
     
+      loader.style.display = 'none';
   }
-
-  loader.style.display = 'none';
-  loaderYesterday.style.display = 'none';
-  loaderTomorrow.style.display = 'none';
 }
