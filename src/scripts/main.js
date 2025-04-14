@@ -86,7 +86,7 @@ const main = async () => {
   yesterday.setDate(yesterday.getDate() - 1);
 
   const tomorrow = new Date();
-  tomorrow.setDate(tomorrow.getDate() + 3);
+  tomorrow.setDate(tomorrow.getDate() + 1);
 
   if (today - finishDate >= 0) {
     alert('Занятия закончились!');
