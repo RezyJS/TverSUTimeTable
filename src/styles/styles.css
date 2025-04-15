@@ -71,7 +71,7 @@
 
 .timetable > div {
   padding: 10px 20px;
-  width: max-content;
+  width: 100%;
 }
 
 .timetable > div #place {
