@@ -2,14 +2,18 @@
   display: flex;
 }
 
+.horizontal {
+  flex-direction: row;
+}
+
 @media(orientation: landscape) {
-  .horizontal {
+  .horizontalContainer {
     flex-direction: row;
   }
 }
 
 @media(orientation: portrait) {
-  .horizontal {
+  .horizontalContainer {
     flex-direction: column;
   }
 }
