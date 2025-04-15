@@ -2,8 +2,16 @@
   display: flex;
 }
 
-.horizontal {
-  flex-direction: row;
+@media(orientation: landscape) {
+  .horizontal {
+    flex-direction: row;
+  }
+}
+
+@media(orientation: portrait) {
+  .horizontal {
+    flex-direction: column;
+  }
 }
 
 .vertical {
